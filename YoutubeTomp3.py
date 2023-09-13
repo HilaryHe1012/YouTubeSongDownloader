@@ -10,7 +10,19 @@ def download(url):
         print("Unable to fetch video information. Please check the video URL or your network connection.")
     return 
 
-def downloadABunch(urls):
-    for url in urls:
+def main():
+    way = input("Do you want to download a bunch or just 1? (1/Bunch) \n")
+    if way == "1":
+        url = input("Please copy your url: \n")
         download(url)
+    if way == "Bunch":
+        n = input("Enter the number of videos you want to download: \n")
+        urls, i = [], 0
+        while i < int(n):
+            url = input("Please copy your url: \n")
+            i += 1
+            download(url)
+        
     return 
+
+main()
