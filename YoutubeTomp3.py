@@ -21,7 +21,6 @@ def download_videos(urls, output_path):
         thread.join()
 
 def main():
-    st = time.time()
     way = input("Do you want to download a bunch or just 1? (1/Bunch) \n")
     output_path = "C:/Users/hilar/Music"
     
